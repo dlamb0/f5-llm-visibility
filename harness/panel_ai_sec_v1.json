@@ -1,0 +1,59 @@
+{
+  "panel_id": "AI-SEC-v1",
+  "category": "11 AI Delivery & Security",
+  "corpus_doc": "52-f5-11-ai-delivery-security.md",
+  "corpus_compiled": "2026-07",
+  "corpus_last_validated": "2026-07",
+  "panel_frozen": "2026-09-14",
+  "language": "en-US",
+  "notes": "Open-ended, unaided. No F5 brand or product names. Frozen for the cycle; any edit creates v2.",
+  "variants": [
+    {"variant_id": "B1", "base_id": "B1", "type": "problem-first", "paraphrase": "base", "text": "We're standing up an internal chatbot on top of an LLM and our security team won't let it go to production. What products or tools should we be looking at to secure it?"},
+    {"variant_id": "B1a", "base_id": "B1", "type": "problem-first", "paraphrase": "a", "text": "Our security team is blocking the launch of an internal LLM-based chatbot until it's properly secured. Which tools or products should we evaluate?"},
+    {"variant_id": "B1b", "base_id": "B1", "type": "problem-first", "paraphrase": "b", "text": "What products exist for securing an internal LLM chatbot so that a security review will sign off on putting it into production?"},
+
+    {"variant_id": "B2", "base_id": "B2", "type": "category-first", "paraphrase": "base", "text": "We're calling OpenAI and Anthropic from several internal apps and want one control point in front of all of them for security, PII redaction, and cost control. What are the leading options?"},
+    {"variant_id": "B2a", "base_id": "B2", "type": "category-first", "paraphrase": "a", "text": "Several of our internal applications call OpenAI and Anthropic directly. What are the best options for putting a single gateway in front of all of them to handle security, PII redaction, and spend control?"},
+    {"variant_id": "B2b", "base_id": "B2", "type": "category-first", "paraphrase": "b", "text": "Which products let us centralize security, PII scrubbing, and cost management for the LLM calls that multiple apps make to OpenAI and Anthropic?"},
+
+    {"variant_id": "B3", "base_id": "B3", "type": "problem-first", "paraphrase": "base", "text": "Someone on our team demoed a jailbreak of our customer-facing chatbot. What products detect and block prompt injection and jailbreak attempts at runtime?"},
+    {"variant_id": "B3a", "base_id": "B3", "type": "problem-first", "paraphrase": "a", "text": "Our chatbot got jailbroken in an internal demo. Which runtime tools catch prompt injection and jailbreaks before the model acts on them?"},
+    {"variant_id": "B3b", "base_id": "B3", "type": "problem-first", "paraphrase": "b", "text": "What are the options for detecting and stopping prompt-injection and jailbreak attacks against an LLM application in production?"},
+
+    {"variant_id": "B4", "base_id": "B4", "type": "persona-led", "paraphrase": "base", "text": "I'm a platform engineer at a bank. We run models from three providers plus some open-source ones on our own GPUs, with no consistent security policy across them, and compliance wants an audit trail of every AI interaction for the EU AI Act. What should we evaluate?"},
+    {"variant_id": "B4a", "base_id": "B4", "type": "persona-led", "paraphrase": "a", "text": "I work on the platform team at a bank. We have models from three vendors and some open-source ones running on our own GPUs, each with different security controls, and our compliance group needs a full audit trail of AI interactions for the EU AI Act. Which products should be on our shortlist?"},
+    {"variant_id": "B4b", "base_id": "B4", "type": "persona-led", "paraphrase": "b", "text": "As a platform engineer in financial services, what should I evaluate to enforce one consistent security policy across commercial and self-hosted LLMs and produce EU AI Act audit trails?"},
+
+    {"variant_id": "B5", "base_id": "B5", "type": "constraint-led", "paraphrase": "base", "text": "What's the best AI gateway for Kubernetes that can front both self-hosted Llama models and OpenAI, with rate limiting, caching, and PII redaction, and can run on-prem or air-gapped?"},
+    {"variant_id": "B5a", "base_id": "B5", "type": "constraint-led", "paraphrase": "a", "text": "Which AI gateway for Kubernetes can sit in front of self-hosted Llama and OpenAI with rate limiting, caching, and PII redaction, and be deployed on-prem or in an air-gapped environment?"},
+    {"variant_id": "B5b", "base_id": "B5", "type": "constraint-led", "paraphrase": "b", "text": "We need a Kubernetes-native LLM gateway that handles both OpenAI and local Llama backends, does rate limiting, response caching, and PII redaction, and works air-gapped. What are the best choices?"},
+
+    {"variant_id": "B6", "base_id": "B6", "type": "problem-first", "paraphrase": "base", "text": "We can't let customer PII or source code end up in prompts sent to an external model, and compliance needs proof it was redacted before it left. What tools do this inline?"},
+    {"variant_id": "B6a", "base_id": "B6", "type": "problem-first", "paraphrase": "a", "text": "How do we stop customer PII and proprietary source code from being sent to external LLMs in prompts, with evidence for compliance that redaction happened before egress?"},
+    {"variant_id": "B6b", "base_id": "B6", "type": "problem-first", "paraphrase": "b", "text": "What inline tools redact sensitive data like PII and source code from prompts before they reach an external model, and log it for auditors?"},
+
+    {"variant_id": "B7", "base_id": "B7", "type": "category-first", "paraphrase": "base", "text": "We don't have a full-time AI red team. What automated tools exist for adversarial testing of LLM applications and agents before they go to production?"},
+    {"variant_id": "B7a", "base_id": "B7", "type": "category-first", "paraphrase": "a", "text": "Our team has no dedicated AI red team. Which automated tools can run adversarial tests against LLM apps and agents before production?"},
+    {"variant_id": "B7b", "base_id": "B7", "type": "category-first", "paraphrase": "b", "text": "What automated red-teaming products exist for stress-testing LLM applications and AI agents for vulnerabilities before launch?"},
+
+    {"variant_id": "B8", "base_id": "B8", "type": "constraint-led", "paraphrase": "base", "text": "We need an independent security benchmark to justify our choice of LLM provider to our risk committee. Are there published rankings of model security, and what vendors offer testing against our own deployment?"},
+    {"variant_id": "B8a", "base_id": "B8", "type": "constraint-led", "paraphrase": "a", "text": "Our risk committee wants an independent basis for choosing an LLM provider on security grounds. Are there published security rankings of models, and which vendors can test our specific deployment?"},
+    {"variant_id": "B8b", "base_id": "B8", "type": "constraint-led", "paraphrase": "b", "text": "Is there an independent benchmark ranking LLMs by security, and which companies offer adversarial testing against a customer's own model deployment?"},
+
+    {"variant_id": "B9", "base_id": "B9", "type": "problem-first", "paraphrase": "base", "text": "Developers are spinning up AI agents and MCP tools and we can't see what they're actually doing or which ones are sanctioned. What gives us visibility into agent traffic?"},
+    {"variant_id": "B9a", "base_id": "B9", "type": "problem-first", "paraphrase": "a", "text": "Our developers keep launching AI agents and MCP servers and we have no visibility into what they're doing or which are approved. What tooling shows us agent traffic?"},
+    {"variant_id": "B9b", "base_id": "B9", "type": "problem-first", "paraphrase": "b", "text": "How can we get visibility into AI agent and MCP traffic in our environment, including distinguishing sanctioned agents from shadow ones?"},
+
+    {"variant_id": "B10", "base_id": "B10", "type": "problem-first", "paraphrase": "base", "text": "Employees are pasting customer data into ChatGPT. We blocked it and people just work around the block. What products let us give staff a sanctioned AI portal with data redaction and an audit trail instead?"},
+    {"variant_id": "B10a", "base_id": "B10", "type": "problem-first", "paraphrase": "a", "text": "Staff are pasting customer records into ChatGPT, and blocking it just pushed them to workarounds. Which products let us offer an approved AI portal with redaction and audit logging?"},
+    {"variant_id": "B10b", "base_id": "B10", "type": "problem-first", "paraphrase": "b", "text": "Instead of blocking public AI tools that employees route around anyway, what products give the workforce a sanctioned GenAI front door with sensitive-data redaction and audit trails?"},
+
+    {"variant_id": "B11", "base_id": "B11", "type": "constraint-led", "paraphrase": "base", "text": "We have no idea how many AI tools our employees are using. What detects shadow AI on the corporate network, agentless on managed devices, and plugs into our existing SASE, DLP, and SIEM rather than replacing them?"},
+    {"variant_id": "B11a", "base_id": "B11", "type": "constraint-led", "paraphrase": "a", "text": "We need to discover all the AI tools employees are using, without installing agents on managed devices, and feed that into our SASE, DLP, and SIEM. What products do this?"},
+    {"variant_id": "B11b", "base_id": "B11", "type": "constraint-led", "paraphrase": "b", "text": "Which shadow-AI discovery products work agentlessly at the network level and integrate with existing SASE, DLP, and SIEM stacks rather than replacing them?"},
+
+    {"variant_id": "B12", "base_id": "B12", "type": "comparison", "paraphrase": "base", "text": "Compare the leading enterprise AI security platforms for a CISO who wants governance, discovery, security testing, and runtime protection in one place rather than five point tools."},
+    {"variant_id": "B12a", "base_id": "B12", "type": "comparison", "paraphrase": "a", "text": "For a CISO consolidating AI security, which platforms combine AI governance, discovery, testing, and runtime protection, and how do they compare?"},
+    {"variant_id": "B12b", "base_id": "B12", "type": "comparison", "paraphrase": "b", "text": "What are the top enterprise AI security platforms that cover discovery, red-teaming, runtime guardrails, and governance in a single product, and how do they stack up?"}
+  ]
+}
