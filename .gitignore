@@ -1,0 +1,7 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+harness/results/
+harness/scored/
+.DS_Store
